@@ -1,0 +1,21 @@
+name: CI/CD Demo
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Echo setup
+        run: echo "Setting up environment..."
+
+      - name: Run demo test
+        run: echo "Running test case... Passed!"
+
+      - name: Deploy script
+        run: echo "Deploying application... Done!"
